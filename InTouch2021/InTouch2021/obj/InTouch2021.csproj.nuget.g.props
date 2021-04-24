@@ -5,14 +5,12 @@
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\1\.nuget\packages\;C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages;C:\Program Files (x86)\Microsoft\Xamarin\NuGet\</NuGetPackageFolders>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\maksi\.nuget\packages\</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.9.1</NuGetToolVersion>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.8.1</NuGetToolVersion>
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <SourceRoot Include="C:\Users\1\.nuget\packages\" />
-    <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
-    <SourceRoot Include="C:\Program Files (x86)\Microsoft\Xamarin\NuGet\" />
+    <SourceRoot Include="$([MSBuild]::EnsureTrailingSlash($(NuGetPackageFolders)))" />
   </ItemGroup>
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
@@ -22,7 +20,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\css\bootstrap-grid.css</Link>
     </Content>
@@ -30,7 +27,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\css\bootstrap-grid.css.map</Link>
     </Content>
@@ -38,7 +34,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\css\bootstrap-grid.min.css</Link>
     </Content>
@@ -46,7 +41,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\css\bootstrap-grid.min.css.map</Link>
     </Content>
@@ -54,7 +48,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\css\bootstrap-reboot.css</Link>
     </Content>
@@ -62,7 +55,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\css\bootstrap-reboot.css.map</Link>
     </Content>
@@ -70,7 +62,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\css\bootstrap-reboot.min.css</Link>
     </Content>
@@ -78,7 +69,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\css\bootstrap-reboot.min.css.map</Link>
     </Content>
@@ -86,7 +76,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\css\bootstrap.css</Link>
     </Content>
@@ -94,7 +83,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\css\bootstrap.css.map</Link>
     </Content>
@@ -102,7 +90,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\css\bootstrap.min.css</Link>
     </Content>
@@ -110,7 +97,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\css\bootstrap.min.css.map</Link>
     </Content>
@@ -118,7 +104,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\js\bootstrap.bundle.js</Link>
     </Content>
@@ -126,7 +111,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\js\bootstrap.bundle.js.map</Link>
     </Content>
@@ -134,7 +118,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\js\bootstrap.bundle.min.js</Link>
     </Content>
@@ -142,7 +125,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\js\bootstrap.bundle.min.js.map</Link>
     </Content>
@@ -150,7 +132,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\js\bootstrap.js</Link>
     </Content>
@@ -158,7 +139,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\js\bootstrap.js.map</Link>
     </Content>
@@ -166,7 +146,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\js\bootstrap.min.js</Link>
     </Content>
@@ -174,7 +153,6 @@
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>4.6.0</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
-      <Pack>false</Pack>
       <Private>False</Private>
       <Link>wwwroot\js\bootstrap.min.js.map</Link>
     </Content>
@@ -183,8 +161,8 @@
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design\5.0.5\build\netcoreapp3.0\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design\5.0.5\build\netcoreapp3.0\Microsoft.EntityFrameworkCore.Design.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\1\.nuget\packages\microsoft.codeanalysis.analyzers\3.0.0</PkgMicrosoft_CodeAnalysis_Analyzers>
-    <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\1\.nuget\packages\microsoft.entityframeworkcore.tools\5.0.5</PkgMicrosoft_EntityFrameworkCore_Tools>
-    <PkgjQuery Condition=" '$(PkgjQuery)' == '' ">C:\Users\1\.nuget\packages\jquery\3.0.0</PkgjQuery>
+    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\maksi\.nuget\packages\microsoft.codeanalysis.analyzers\3.0.0</PkgMicrosoft_CodeAnalysis_Analyzers>
+    <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\maksi\.nuget\packages\microsoft.entityframeworkcore.tools\5.0.5</PkgMicrosoft_EntityFrameworkCore_Tools>
+    <PkgjQuery Condition=" '$(PkgjQuery)' == '' ">C:\Users\maksi\.nuget\packages\jquery\3.0.0</PkgjQuery>
   </PropertyGroup>
 </Project>
