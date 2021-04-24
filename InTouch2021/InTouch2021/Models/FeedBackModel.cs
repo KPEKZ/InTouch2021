@@ -16,18 +16,18 @@ namespace InTouch2021.Models
         [Required]
         public string name { get; set; }
 
-        public int phoneNumber { get; set; }
+        public string phoneNumber { get; set; }
 
         [Required]
         public string email { get; set; }
 
         [Required]
-        public int studNumber { get; set; }
+        public string studNumber { get; set; }
 
         [Required]
         public string message { get; set; }
 
         [Required]
-        public int Value { get; set; }
+        public string Value { get; set; }
     }
 }

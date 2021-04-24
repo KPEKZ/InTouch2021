@@ -145,6 +145,19 @@ body {
     height: min-content;
 }
 
+.demo-card-square-success.mdl-card {
+    width: 60%;
+    min-height: 600px;
+    height: min-content;
+    margin: 20px auto;
+}
+
+.demo-card-square-success.mdl-card img {
+    width: 40%;
+    display:block;
+    margin:auto;
+}
+
 .myChart{
     width:100%;
 }
