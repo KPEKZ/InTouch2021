@@ -132,6 +132,11 @@ body {
     width: 60%;
     height: 550px;
 }
+.demo-card-square-anketa.mdl-card {
+    width: 100%;
+    min-height: 600px;
+    height: min-content;
+}
 
 .demo-card-square > .mdl-card__title {
     color: black;
@@ -209,4 +214,8 @@ background-size: 65%;
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
+}
+
+.demo-list-item {
+    width: 300px;
 }
