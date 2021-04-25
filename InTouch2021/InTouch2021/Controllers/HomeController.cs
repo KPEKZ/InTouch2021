@@ -1,4 +1,5 @@
-﻿using InTouch2021.Models;
+﻿using InTouch2021.Data;
+using InTouch2021.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -9,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace InTouch2021.Controllers
 {
-    //EmailService emailService = new EmailService();
-    //await emailService.SendEmailAsync("intouch2021@mail.ru", "Тема письма", "Тест письма: тест!");
+   
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
+      
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;

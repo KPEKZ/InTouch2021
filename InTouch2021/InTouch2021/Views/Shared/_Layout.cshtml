@@ -4,9 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - InTouch2021</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="~/mdl/material.min.css" type="text/css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="icon" href="~/img/small.svg" type="image/x-icon">
     <link rel="stylesheet" href="~/css/site.css" />
 
 </head>
@@ -15,28 +17,27 @@
     <div class="demo-layout-transparent mdl-layout mdl-js-layout">
         <header class="mdl-layout__header mdl-layout__header--transparent">
             <div class="mdl-layout__header-row">
-                <!-- Title -->
                 <span class="our-title mdl-layout-title">Menu</span>
-                <!-- Add spacer, to align navigation to the right -->
                 <div class="mdl-layout-spacer"></div>
-                <!-- Navigation -->
                 <nav class="mdl-navigation">
                     <a class="nav-link nav-own-link" asp-area="" asp-controller="Home" asp-action="Index">Основная информация</a>
                     <a class="nav-link nav-own-link" asp-area="" asp-controller="AnketaFormData" asp-action="Index">Онлайн-Опрос</a>
-                    <a class="nav-own-link nav-link"  asp-area="" asp-controller="Home" asp-action="Privacy">Метаданные</a>
-                    <a class="nav-own-link nav-link" asp-area="" asp-controller="Home" asp-action="feedBack">Обратная связь</a>
-                    <a class="nav-own-link nav-link" asp-area="" asp-controller="Home" asp-action="feedBack">Менеджмент</a>
+                    <a class="nav-own-link nav-link" asp-area="" asp-controller="AnketaFormData" asp-action="Monitor">Метаданные</a>
+                    <a class="nav-own-link nav-link" asp-area="" asp-controller="FeedBack" asp-action="FeedBack">Обратная связь</a>
+                    <a class="nav-own-link nav-link" asp-area="" asp-controller="FeedBack" asp-action="UserManager">Обзор сообщений</a>
+                    <a class="nav-own-link nav-link" asp-area="" asp-controller="FeedBack" asp-action="Manager">Менеджер</a>
                 </nav>
             </div>
         </header>
         <div class="our-title mdl-layout__drawer">
             <span class="mdl-layout-title">Menu</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" asp-area="" asp-controller="Home" asp-action="Index">Основная информация</a>
-                <a class="mdl-navigation__link" asp-area="" asp-controller="AnketaFormData" asp-action="Index">Онлайн-Опрос</a>
-                <a class="mdl-navigation__link" asp-area="" asp-controller="Home" asp-action="Privacy">Метаданные</a>
-                <a class="mdl-navigation__link" asp-area="" asp-controller="Home" asp-action="feedBack">Обратная связь</a>
-                <a class="nav-own-link nav-link" asp-area="" asp-controller="Home" asp-action="feedBack">Менеджмент</a>
+                <a class="nav-own-link nav-link" asp-area="" asp-controller="Home" asp-action="Index">Основная информация</a>
+                <a class="nav-own-link nav-link" asp-area="" asp-controller="AnketaFormData" asp-action="Index">Онлайн-Опрос</a>
+                <a class="nav-own-link nav-link" asp-area="" asp-controller="AnketaFormData" asp-action="Monitor">Метаданные</a>
+                <a class="nav-own-link nav-link" asp-area="" asp-controller="FeedBack" asp-action="FeedBack">Обратная связь</a>
+                <a class="nav-own-link nav-link" asp-area="" asp-controller="FeedBack" asp-action="UserManager">Обзор сообщений</a>
+                <a class="nav-own-link nav-link" asp-area="" asp-controller="FeedBack" asp-action="Manager">Менеджер</a>
             </nav>
         </div>
 
