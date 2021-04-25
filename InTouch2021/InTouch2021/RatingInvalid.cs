@@ -7,9 +7,9 @@ namespace InTouch2021
 {
 	public class RatingInvalid
 	{
-		public float[] WeightAnswersForOne;
-		public float[] WeightAnswersForSecond;
-		public float[] WeightAnswersForThird;
+		public float[] WeightAnswersForOne = new float[50];
+		public float[] WeightAnswersForSecond = new float[50];
+		public float[] WeightAnswersForThird = new float[50];
 		public static float CH = 0;
 
 

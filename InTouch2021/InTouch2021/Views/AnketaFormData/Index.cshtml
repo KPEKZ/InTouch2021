@@ -3,8 +3,11 @@
     ViewData["Title"] = "Index";
 }
 
-<form class="container m-5" asp-action="Submit">
-    <div class="demo-card-square-anketa mdl-card mdl-shadow--2dp card-own-general">
+@model InTouch2021.Models.AnketaFormDataModel;
+
+<form class="container m-5" asp-action="Index">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="demo-card-square-anketa mdl-card mdl-shadow--2dp card-own-general animate__animated animate__fadeInUp animate__delay-1s">
         <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--12-col">
                 <ul class="demo-list-item mdl-list m-auto">
@@ -17,15 +20,15 @@
                     </li>
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop1" value="1">
+                            <input type="radio" asp-for="WeightAnswersForStand[0]" id="vop1" value="1">
                             <label for="vop1">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop2" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForStand[0]" id="vop2" value="0.5">
                             <label for="vop2">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop3" value="0">
+                            <input type="radio" asp-for="WeightAnswersForStand[0]" id="vop3" value="0">
                             <label for="vop3">Нет</label>
                         </div>
 
@@ -40,15 +43,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop4" value="1">
+                            <input type="radio" asp-for="WeightAnswersForStand[1]" id="vop4" value="1">
                             <label for="vop4">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop5" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForStand[1]" id="vop5" value="0.5">
                             <label for="vop5">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop6" value="0">
+                            <input type="radio" asp-for="WeightAnswersForStand[1]" id="vop6" value="0">
                             <label for="vop6">Нет</label>
                         </div>
 
@@ -63,15 +66,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop7" value="1">
+                            <input type="radio" asp-for="WeightAnswersForStand[2]" id="vop7" value="1">
                             <label for="vop7">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop8" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForStand[2]" id="vop8" value="0.5">
                             <label for="vop8">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop9" value="0">
+                            <input type="radio" asp-for="WeightAnswersForStand[2]" id="vop9" value="0">
                             <label for="vop9">Нет</label>
                         </div>
 
@@ -87,15 +90,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop10" value="1">
+                            <input type="radio" asp-for="WeightAnswersForStand[3]" id="vop10" value="1">
                             <label for="vop10">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop11" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForStand[3]" id="vop11" value="0.5">
                             <label for="vop11">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop12" value="0">
+                            <input type="radio" asp-for="WeightAnswersForStand[3]" id="vop12" value="0">
                             <label for="vop12">Нет</label>
                         </div>
 
@@ -111,11 +114,11 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop13" value="1">
+                            <input type="radio" asp-for="WeightAnswersForStand[4]" id="vop13" value="1">
                             <label for="vop13">Да</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop14" value="0">
+                            <input type="radio" asp-for="WeightAnswersForStand[4]" id="vop14" value="0">
                             <label for="vop14">Нет</label>
                         </div>
 
@@ -131,15 +134,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop15" value="1">
+                            <input type="radio" asp-for="WeightAnswersForStand[5]" id="vop15" value="1">
                             <label for="vop15">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop16" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForStand[5]" id="vop16" value="0.5">
                             <label for="vop16">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop17" value="0">
+                            <input type="radio" asp-for="WeightAnswersForStand[5]" id="vop17" value="0">
                             <label for="vop17">Нет</label>
                         </div>
 
@@ -155,21 +158,22 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop18" value="1">
+                            <input type="radio" asp-for="WeightAnswersForStand[6]" id="vop18" value="1">
                             <label for="vop18">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop19" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForStand[6]" id="vop19" value="0.5">
                             <label for="vop19">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop20" value="0">
+                            <input type="radio" asp-for="WeightAnswersForStand[6]" id="vop20" value="0">
                             <label for="vop20">Нет</label>
                         </div>
 
                     </div>
 
-
+                    @*вопросы про стенд свреху*@
+                    @*вопросы про сайт снизу*@
 
                     <li class="mdl-list__item m-5">
                         <span class="mdl-list__item-primary-content text-center">
@@ -180,15 +184,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop21" value="1">
+                            <input type="radio" asp-for="WeightAnswersForSite[0]" id="vop21" value="1">
                             <label for="vop21">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop22" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForSite[0]" id="vop22" value="0.5">
                             <label for="vop22">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop23" value="0">
+                            <input type="radio" asp-for="WeightAnswersForSite[0]" id="vop23" value="0">
                             <label for="vop23">Нет</label>
                         </div>
 
@@ -205,15 +209,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop24" value="1">
+                            <input type="radio" asp-for="WeightAnswersForSite[1]" id="vop24" value="1">
                             <label for="vop24">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop25" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForSite[1]" id="vop25" value="0.5">
                             <label for="vop25">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop26" value="0">
+                            <input type="radio" asp-for="WeightAnswersForSite[1]" id="vop26" value="0">
                             <label for="vop26">Нет</label>
                         </div>
 
@@ -230,15 +234,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop27" value="1">
+                            <input type="radio" asp-for="WeightAnswersForSite[2]" id="vop27" value="1">
                             <label for="vop27">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop28" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForSite[2]" id="vop28" value="0.5">
                             <label for="vop28">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop29" value="0">
+                            <input type="radio" asp-for="WeightAnswersForSite[2]" id="vop29" value="0">
                             <label for="vop29">Нет</label>
                         </div>
 
@@ -256,15 +260,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop30" value="1">
+                            <input type="radio" asp-for="WeightAnswersForSite[3]" id="vop30" value="1">
                             <label for="vop30">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop31" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForSite[3]" id="vop31" value="0.5">
                             <label for="vop31">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop32" value="0">
+                            <input type="radio" asp-for="WeightAnswersForSite[3]" id="vop32" value="0">
                             <label for="vop32">Нет</label>
                         </div>
 
@@ -281,15 +285,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop33" value="1">
+                            <input type="radio" asp-for="WeightAnswersForSite[4]" id="vop33" value="1">
                             <label for="vop33">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop34" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForSite[4]" id="vop34" value="0.5">
                             <label for="vop34">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop35" value="0">
+                            <input type="radio" asp-for="WeightAnswersForSite[4]" id="vop35" value="0">
                             <label for="vop35">Нет</label>
                         </div>
 
@@ -306,15 +310,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop36" value="1">
+                            <input type="radio" asp-for="WeightAnswersForSite[5]" id="vop36" value="1">
                             <label for="vop36">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop37" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForSite[5]" id="vop37" value="0.5">
                             <label for="vop37">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop38" value="0">
+                            <input type="radio" asp-for="WeightAnswersForSite[5]" id="vop38" value="0">
                             <label for="vop38">Нет</label>
                         </div>
 
@@ -331,20 +335,22 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop39" value="1">
+                            <input type="radio" asp-for="WeightAnswersForSite[6]" id="vop39" value="1">
                             <label for="vop39">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop40" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForSite[6]" id="vop40" value="0.5">
                             <label for="vop40">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop41" value="0">
+                            <input type="radio" asp-for="WeightAnswersForSite[6]" id="vop41" value="0">
                             <label for="vop41">Нет</label>
                         </div>
 
                     </div>
 
+                    @*сверху про сайты*@
+                    @*снизу про дистант*@
 
 
                     <li class="mdl-list__item m-5">
@@ -356,15 +362,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop42" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[0]" id="vop42" value="0.5">
                             <label for="vop42">Очная</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop43" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[0]" id="vop43" value="0.5">
                             <label for="vop43">Заочная</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop44" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[0]" id="vop44" value="0.5">
                             <label for="vop44">Очно-Заочная</label>
                         </div>
 
@@ -372,22 +378,22 @@
 
                     <li class="mdl-list__item m-5">
                         <span class="mdl-list__item-primary-content text-center">
-                             Адаптировались ли вы к новым условиям дистанционного обучения?
+                            Адаптировались ли вы к новым условиям дистанционного обучения?
                         </span>
                     </li>
 
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop45" value="1">
+                            <input type="radio" asp-for="WeightForSecondRule[1]" id="vop45" value="1">
                             <label for="vop45">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop46" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[1]" id="vop46" value="0.5">
                             <label for="vop46">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop47" value="0">
+                            <input type="radio" asp-for="WeightForSecondRule[1]" id="vop47" value="0">
                             <label for="vop47">Нет</label>
                         </div>
 
@@ -402,15 +408,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop48" value="1">
+                            <input type="radio" asp-for="WeightForSecondRule[2]" id="vop48" value="1">
                             <label for="vop48">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop49" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[2]" id="vop49" value="0.5">
                             <label for="vop49">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop50" value="0">
+                            <input type="radio" asp-for="WeightForSecondRule[2]" id="vop50" value="0">
                             <label for="vop50">Нет</label>
                         </div>
 
@@ -425,15 +431,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop51" value="1">
+                            <input type="radio" asp-for="WeightForSecondRule[3]" id="vop51" value="1">
                             <label for="vop51">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop52" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[3]" id="vop52" value="0.5">
                             <label for="vop52">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop53" value="0">
+                            <input type="radio" asp-for="WeightForSecondRule[3]" id="vop53" value="0">
                             <label for="vop53">Нет</label>
                         </div>
 
@@ -448,15 +454,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop54" value="1">
+                            <input type="radio" asp-for="WeightForSecondRule[4]" id="vop54" value="1">
                             <label for="vop54">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop55" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[4]" id="vop55" value="0.5">
                             <label for="vop55">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop56" value="0">
+                            <input type="radio" asp-for="WeightForSecondRule[4]" id="vop56" value="0">
                             <label for="vop56">Нет</label>
                         </div>
 
@@ -472,15 +478,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop57" value="1">
+                            <input type="radio" asp-for="WeightForSecondRule[5]" id="vop57" value="1">
                             <label for="vop57">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop58" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[5]" id="vop58" value="0.5">
                             <label for="vop58">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop59" value="0">
+                            <input type="radio" asp-for="WeightForSecondRule[5]" id="vop59" value="0">
                             <label for="vop59">Нет</label>
                         </div>
 
@@ -496,15 +502,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop60" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[6]" id="vop60" value="0.5">
                             <label for="vop60">из ЭОС</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop61" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[6]" id="vop61" value="0.5">
                             <label for="vop61">из социальных сетей</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop62" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[6]" id="vop62" value="0.5">
                             <label for="vop62">из звонков одногрупников</label>
                         </div>
 
@@ -520,15 +526,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop63" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[7]" id="vop63" value="0.5">
                             <label for="vop63">ЭОС</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop64" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[7]" id="vop64" value="0.5">
                             <label for="vop64">Мессенджеры</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop65" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[7]" id="vop65" value="0.5">
                             <label for="vop65">MMS</label>
                         </div>
 
@@ -543,15 +549,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop66" value="1">
+                            <input type="radio" asp-for="WeightForSecondRule[8]" id="vop66" value="1">
                             <label for="vop66">Хорошо</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop67" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[8]" id="vop67" value="0.5">
                             <label for="vop67">Нормально</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop68" value="0">
+                            <input type="radio" asp-for="WeightForSecondRule[8]" id="vop68" value="0">
                             <label for="vop68">Неудовлетворительно</label>
                         </div>
 
@@ -567,15 +573,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop69" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[9]" id="vop69" value="0.5">
                             <label for="vop69">Нестабильный интернет</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop70" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[9]" id="vop70" value="0.5">
                             <label for="vop70">Нехватка мощностей оборудования</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop71" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[9]" id="vop71" value="0.5">
                             <label for="vop71">Плохое качество дист. обучения</label>
                         </div>
 
@@ -591,15 +597,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop72" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[10]" id="vop72" value="0.5">
                             <label for="vop72">Учеба на дому</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop73" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[10]" id="vop73" value="0.5">
                             <label for="vop73">низкое контактирование с людьми</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop74" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[10]" id="vop74" value="0.5">
                             <label for="vop74">Можно пропустить занятия</label>
                         </div>
 
@@ -616,15 +622,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop75" value="1">
+                            <input type="radio" asp-for="WeightForSecondRule[11]" id="vop75" value="1">
                             <label for="vop75">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop76" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[11]" id="vop76" value="0.5">
                             <label for="vop76">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop77" value="0">
+                            <input type="radio" asp-for="WeightForSecondRule[11]" id="vop77" value="0">
                             <label for="vop77">Нет</label>
                         </div>
 
@@ -640,19 +646,22 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop78" value="1">
+                            <input type="radio" asp-for="WeightForSecondRule[12]" id="vop78" value="1">
                             <label for="vop78">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop79" value="0.5">
+                            <input type="radio" asp-for="WeightForSecondRule[12]" id="vop79" value="0.5">
                             <label for="vop79">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop80" value="0">
+                            <input type="radio" asp-for="WeightForSecondRule[12]" id="vop80" value="0">
                             <label for="vop80">Нет</label>
                         </div>
 
                     </div>
+
+                    @*Сверху дистант*@
+                    @*сайт + станд*@
 
 
                     <li class="mdl-list__item m-5">
@@ -664,15 +673,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop81" value="1">
+                            <input type="radio" asp-for="WeightForThirdRuleStand[0]" id="vop81" value="1">
                             <label for="vop81">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop82" value="0.5">
+                            <input type="radio" asp-for="WeightForThirdRuleStand[0]" id="vop82" value="0.5">
                             <label for="vop82">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop83" value="0">
+                            <input type="radio" asp-for="WeightForThirdRuleStand[0]" id="vop83" value="0">
                             <label for="vop83">Нет</label>
                         </div>
 
@@ -688,15 +697,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop83" value="1">
-                            <label for="vop83">Да</label>
+                            <input type="radio" asp-for="WeightForThirdRuleStand[1]" id="vop1992" value="1">
+                            <label for="vop1992">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop84" value="0.5">
+                            <input type="radio" asp-for="WeightForThirdRuleStand[1]" id="vop84" value="0.5">
                             <label for="vop84">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop85" value="0">
+                            <input type="radio" asp-for="WeightForThirdRuleStand[1]" id="vop85" value="0">
                             <label for="vop85">Нет</label>
                         </div>
 
@@ -712,20 +721,22 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop86" value="1">
+                            <input type="radio" asp-for="WeightForThirdRuleStand[2]" id="vop86" value="1">
                             <label for="vop86">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop87" value="0.5">
+                            <input type="radio" asp-for="WeightForThirdRuleStand[2]" id="vop87" value="0.5">
                             <label for="vop87">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop88" value="0">
+                            <input type="radio" asp-for="WeightForThirdRuleStand[2]" id="vop88" value="0">
                             <label for="vop88">Нет</label>
                         </div>
 
                     </div>
 
+                    @*сверху стенды*@
+                    @*снизу сайты*@
 
                     <li class="mdl-list__item m-5">
                         <span class="mdl-list__item-primary-content text-center">
@@ -736,15 +747,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop89" value="1">
+                            <input type="radio" asp-for="WeightForThirdRuleSite[0]" id="vop89" value="1">
                             <label for="vop89">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop90" value="0.5">
+                            <input type="radio" asp-for="WeightForThirdRuleSite[0]" id="vop90" value="0.5">
                             <label for="vop90">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop91" value="0">
+                            <input type="radio" asp-for="WeightForThirdRuleSite[0]" id="vop91" value="0">
                             <label for="vop91">Нет</label>
                         </div>
 
@@ -760,15 +771,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop92" value="1">
+                            <input type="radio" asp-for="WeightForThirdRuleSite[1]" id="vop92" value="1">
                             <label for="vop92">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop93" value="0.5">
+                            <input type="radio" asp-for="WeightForThirdRuleSite[1]" id="vop93" value="0.5">
                             <label for="vop93">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop94" value="0">
+                            <input type="radio" asp-for="WeightForThirdRuleSite[1]" id="vop94" value="0">
                             <label for="vop94">Нет</label>
                         </div>
 
@@ -784,15 +795,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop95" value="1">
+                            <input type="radio" asp-for="WeightForThirdRuleSite[2]" id="vop95" value="1">
                             <label for="vop95">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop96" value="0.5">
+                            <input type="radio" asp-for="WeightForThirdRuleSite[2]" id="vop96" value="0.5">
                             <label for="vop96">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop97" value="0">
+                            <input type="radio" asp-for="WeightForThirdRuleSite[2]" id="vop97" value="0">
                             <label for="vop97">Нет</label>
                         </div>
 
@@ -808,19 +819,22 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop98" value="1">
+                            <input type="radio" asp-for="WeightForThirdRuleSite[3]" id="vop98" value="1">
                             <label for="vop98">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop99" value="0.5">
+                            <input type="radio" asp-for="WeightForThirdRuleSite[3]" id="vop99" value="0.5">
                             <label for="vop99">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop100" value="0">
+                            <input type="radio" asp-for="WeightForThirdRuleSite[3]" id="vop100" value="0">
                             <label for="vop100">Нет</label>
                         </div>
 
                     </div>
+
+                    @*конец первой диаграммы*@
+
 
 
                     <li class="mdl-list__item m-5">
@@ -832,15 +846,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop101" value="1">
+                            <input type="radio" asp-for="WeightAnswersForOne_1[0]" id="vop101" value="1">
                             <label for="vop101">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop102" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForOne_1[0]" id="vop102" value="0.5">
                             <label for="vop102">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop103" value="0">
+                            <input type="radio" asp-for="WeightAnswersForOne_1[0]" id="vop103" value="0">
                             <label for="vop103">Нет</label>
                         </div>
 
@@ -856,15 +870,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop104" value="1">
+                            <input type="radio" asp-for="WeightAnswersForOne_1[1]" id="vop104" value="1">
                             <label for="vop104">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop105" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForOne_1[1]" id="vop105" value="0.5">
                             <label for="vop105">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop106" value="0">
+                            <input type="radio" asp-for="WeightAnswersForOne_1[1]" id="vop106" value="0">
                             <label for="vop106">Нет</label>
                         </div>
 
@@ -880,15 +894,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop107" value="1">
+                            <input type="radio" asp-for="WeightAnswersForOne_1[2]" id="vop107" value="1">
                             <label for="vop107">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop108" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForOne_1[2]" id="vop108" value="0.5">
                             <label for="vop108">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop109" value="0">
+                            <input type="radio" asp-for="WeightAnswersForOne_1[2]" id="vop109" value="0">
                             <label for="vop109">Нет</label>
                         </div>
 
@@ -905,15 +919,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop110" value="1">
+                            <input type="radio" asp-for="WeightAnswersForOne_1[3]" id="vop110" value="1">
                             <label for="vop110">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop111" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForOne_1[3]" id="vop111" value="0.5">
                             <label for="vop111">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop112" value="0">
+                            <input type="radio" asp-for="WeightAnswersForOne_1[3]" id="vop112" value="0">
                             <label for="vop112">Нет</label>
                         </div>
 
@@ -929,19 +943,22 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop113" value="1">
+                            <input type="radio" asp-for="WeightAnswersForOne_1[4]" id="vop113" value="1">
                             <label for="vop113">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop114" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForOne_1[4]" id="vop114" value="0.5">
                             <label for="vop114">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop115" value="0">
+                            <input type="radio" asp-for="WeightAnswersForOne_1[4]" id="vop115" value="0">
                             <label for="vop115">Нет</label>
                         </div>
 
                     </div>
+
+
+                    @*для второго массива*@
 
                     <li class="mdl-list__item m-5">
                         <span class="mdl-list__item-primary-content text-center">
@@ -952,15 +969,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop116" value="1">
+                            <input type="radio" asp-for="WeightAnswersForSecond_1[0]" id="vop116" value="1">
                             <label for="vop116">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop117" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForSecond_1[0]" id="vop117" value="0.5">
                             <label for="vop117">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop118" value="0">
+                            <input type="radio" asp-for="WeightAnswersForSecond_1[0]" id="vop118" value="0">
                             <label for="vop118">Нет</label>
                         </div>
 
@@ -976,19 +993,21 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop119" value="1">
+                            <input type="radio" asp-for="WeightAnswersForSecond_1[1]" id="vop119" value="1">
                             <label for="vop119">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop120" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForSecond_1[1]" id="vop120" value="0.5">
                             <label for="vop120">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop121" value="0">
+                            <input type="radio" asp-for="WeightAnswersForSecond_1[1]" id="vop121" value="0">
                             <label for="vop121">Нет</label>
                         </div>
 
                     </div>
+
+                    @*снизу для инвалидов*@
 
 
                     <li class="mdl-list__item m-5">
@@ -1000,15 +1019,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop122" value="1">
+                            <input type="radio" asp-for="WeightAnswersForOne[0]" id="vop122" value="1">
                             <label for="vop122">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop123" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForOne[0]" id="vop123" value="0.5">
                             <label for="vop123">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop124" value="0">
+                            <input type="radio" asp-for="WeightAnswersForOne[0]" id="vop124" value="0">
                             <label for="vop124">Нет</label>
                         </div>
 
@@ -1025,15 +1044,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop125" value="1">
+                            <input type="radio" asp-for="WeightAnswersForOne[1]" id="vop125" value="1">
                             <label for="vop125">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop126" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForOne[1]" id="vop126" value="0.5">
                             <label for="vop126">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop127" value="0">
+                            <input type="radio" asp-for="WeightAnswersForOne[1]" id="vop127" value="0">
                             <label for="vop127">Нет</label>
                         </div>
 
@@ -1049,15 +1068,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop128" value="1">
+                            <input type="radio" asp-for="WeightAnswersForOne[2]" id="vop128" value="1">
                             <label for="vop128">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop129" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForOne[2]" id="vop129" value="0.5">
                             <label for="vop129">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop130" value="0">
+                            <input type="radio" asp-for="WeightAnswersForOne[2]" id="vop130" value="0">
                             <label for="vop130">Нет</label>
                         </div>
 
@@ -1073,15 +1092,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop131" value="1">
+                            <input type="radio" asp-for="WeightAnswersForOne[3]" id="vop131" value="1">
                             <label for="vop131">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop132" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForOne[3]" id="vop132" value="0.5">
                             <label for="vop132">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop133" value="0">
+                            <input type="radio" asp-for="WeightAnswersForOne[3]" id="vop133" value="0">
                             <label for="vop1333">Нет</label>
                         </div>
 
@@ -1097,19 +1116,21 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop134" value="1">
+                            <input type="radio" asp-for="WeightAnswersForOne[4]" id="vop134" value="1">
                             <label for="vop134">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop135" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForOne[4]" id="vop135" value="0.5">
                             <label for="vop135">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop136" value="0">
+                            <input type="radio" asp-for="WeightAnswersForOne[4]" id="vop136" value="0">
                             <label for="vop136">Нет</label>
                         </div>
 
                     </div>
+
+                    @*вторые инвалиды*@
 
 
                     <li class="mdl-list__item m-5">
@@ -1121,15 +1142,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop137" value="1">
+                            <input type="radio" asp-for="WeightAnswersForSecond[0]" id="vop137" value="1">
                             <label for="vop137">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop138" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForSecond[0]" id="vop138" value="0.5">
                             <label for="vop138">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop139" value="0">
+                            <input type="radio" asp-for="WeightAnswersForSecond[0]" id="vop139" value="0">
                             <label for="vop139">Нет</label>
                         </div>
 
@@ -1146,15 +1167,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop140" value="1">
+                            <input type="radio" asp-for="WeightAnswersForSecond[1]" id="vop140" value="1">
                             <label for="vop140">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop141" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForSecond[1]" id="vop141" value="0.5">
                             <label for="vop141">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop142" value="0">
+                            <input type="radio" asp-for="WeightAnswersForSecond[1]" id="vop142" value="0">
                             <label for="vop142">Нет</label>
                         </div>
 
@@ -1169,15 +1190,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop143" value="1">
+                            <input type="radio" asp-for="WeightAnswersForSecond[2]" id="vop143" value="1">
                             <label for="vop143">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop144" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForSecond[2]" id="vop144" value="0.5">
                             <label for="vop144">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop145" value="0">
+                            <input type="radio" asp-for="WeightAnswersForSecond[2]" id="vop145" value="0">
                             <label for="vop145">Нет</label>
                         </div>
 
@@ -1192,15 +1213,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop146" value="1">
+                            <input type="radio" asp-for="WeightAnswersForSecond[3]" id="vop146" value="1">
                             <label for="vop146">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop147" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForSecond[3]" id="vop147" value="0.5">
                             <label for="vop147">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop148" value="0">
+                            <input type="radio" asp-for="WeightAnswersForSecond[3]" id="vop148" value="0">
                             <label for="vop148">Нет</label>
                         </div>
 
@@ -1216,15 +1237,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop149" value="1">
+                            <input type="radio" asp-for="WeightAnswersForSecond[4]" id="vop149" value="1">
                             <label for="vop149">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop150" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForSecond[4]" id="vop150" value="0.5">
                             <label for="vop150">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop151" value="0">
+                            <input type="radio" asp-for="WeightAnswersForSecond[4]" id="vop151" value="0">
                             <label for="vop151">Нет</label>
                         </div>
 
@@ -1241,45 +1262,48 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop152" value="1">
+                            <input type="radio" asp-for="WeightAnswersForSecond[5]" id="vop152" value="1">
                             <label for="vop152">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop153" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForSecond[5]" id="vop153" value="0.5">
                             <label for="vop153">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop154" value="0">
+                            <input type="radio" asp-for="WeightAnswersForSecond[5]" id="vop154" value="0">
                             <label for="vop154">Нет</label>
                         </div>
 
                     </div>
 
+                    @*третий инвалид*@
 
 
                     <li class="mdl-list__item m-5">
                         <span class="mdl-list__item-primary-content text-center">
-                            Готовы ли Вы рекомендовать данную образовательную организацию родственникам и знакомым (или могли бы Вы ее рекомендовать, если бы была возможность выбора образовательной организации)?
+                            Удовлетворены ли Вы доступностью услуг для инвалидов?
                         </span>
                     </li>
 
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop155" value="1">
+                            <input type="radio" asp-for="WeightAnswersForThird[0]" id="vop155" value="1">
                             <label for="vop155">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop156" value="0.5">
+                            <input type="radio" asp-for="WeightAnswersForThird[0]" id="vop156" value="0.5">
                             <label for="vop156">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop157" value="0">
+                            <input type="radio" asp-for="WeightAnswersForThird[0]" id="vop157" value="0">
                             <label for="vop157">Нет</label>
                         </div>
 
                     </div>
 
+
+                    @*общие вопросы*@
 
 
                     <li class="mdl-list__item m-5">
@@ -1291,15 +1315,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop158" value="1">
+                            <input type="radio" asp-for="isSuccess" id="vop158" value="1">
                             <label for="vop158">Да</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop159" value="0.5">
+                            <input type="radio" asp-for="isSuccess" id="vop159" value="0.5">
                             <label for="vop159">Частично</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop160" value="0">
+                            <input type="radio" asp-for="isSuccess" id="vop160" value="0">
                             <label for="vop160">Нет</label>
                         </div>
 
@@ -1315,15 +1339,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop161" value="0.5">
+                            <input type="radio" asp-for="chouse" id="vop161" value="0.5">
                             <label for="vop161">больше перерывов</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop162" value="0.5">
+                            <input type="radio" asp-for="chouse" id="vop162" value="0.5">
                             <label for="vop162">Снизить длительность лекций</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop163" value="0.5">
+                            <input type="radio" asp-for="chouse" id="vop163" value="0.5">
                             <label for="vop163">Бесплатный обед</label>
                         </div>
 
@@ -1338,11 +1362,11 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop164" value="0">
+                            <input type="radio" asp-for="sex" id="vop164" value="0">
                             <label for="vop164">М</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop165" value="0">
+                            <input type="radio" asp-for="sex" id="vop165" value="1">
                             <label for="vop165">Ж</label>
                         </div>
                     </div>
@@ -1355,7 +1379,7 @@
 
 
                     <div class=" d-flex mb-5 justify-content-around">
-                        <input class="mdl-textfield__input m-2" type="text" id="166" placeholder="Ваш возраст">
+                        <input asp-for="age" class="mdl-textfield__input m-2" type="text" id="166" placeholder="Ваш возраст">
                     </div>
 
 
@@ -1368,15 +1392,15 @@
 
                     <div class=" d-flex mb-5 justify-content-around">
                         <div class="answ-1">
-                            <input type="radio" id="vop167" value="0">
+                            <input type="radio" asp-for="directionStudy" id="vop167" value="1">
                             <label for="vop167">Бакалавриат</label>
                         </div>
                         <div class="answ-2">
-                            <input type="radio" id="vop168" value="0">
+                            <input type="radio" asp-for="directionStudy" id="vop168" value="2">
                             <label for="vop168">Магистратура</label>
                         </div>
                         <div class="answ-3">
-                            <input type="radio" id="vop169" value="0">
+                            <input type="radio" asp-for="directionStudy" id="vop169" value="3">
                             <label for="vop169">Аспирантура</label>
                         </div>
 
@@ -1388,7 +1412,7 @@
                         </span>
                     </li>
 
-                    <input class="mdl-textfield__input m-2" type="text" id="170" placeholder="Ваше номер">
+                    <input asp-for="studNumber" class="mdl-textfield__input m-2" type="text" id="170" placeholder="Ваш номер телефона">
 
                     <li class="mdl-list__item m-5">
                         <span class="mdl-list__item-primary-content text-center">
@@ -1396,11 +1420,35 @@
                         </span>
                     </li>
 
-                    <input placeholder="email" class="mdl-textfield__input m-2" type="email" id="171" pattern="[a-z0-9._%+-]+\@@[a-z0-9.-]+\.[a-z]{2, 4}$">
+                    <input asp-for="email" placeholder="email" class="mdl-textfield__input m-2" type="email" id="171" pattern="[a-z0-9._%+-]+\@@[a-z0-9.-]+\.[a-z]{2, 4}$">
+
+
+                    <li class="mdl-list__item m-5">
+                        <span class="mdl-list__item-primary-content text-center">
+                            Укажите Ваше имя
+                        </span>
+                    </li>
+
+                    <input asp-for="name" placeholder="email" class="mdl-textfield__input m-2" type="text" id="172">
 
                 </ul>
+
+                <div class="mdl-cell mdl-cell--12-col">
+
+                    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored m-5 mdl-js-ripple-effect">
+                        Отправить
+                    </button>
+
+                </div>
 
             </div>
         </div>
     </div>
 </form>
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

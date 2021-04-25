@@ -1,0 +1,94 @@
+﻿
+@model IEnumerable<InTouch2021.Models.AnketaFormDataModel>
+@using System;
+
+
+<h1 class="display-2 text-center">@ViewData["Title"]</h1>
+
+<p class="text-center">
+    Пройдите анкету о качестве условий осуществления образовательной
+    деятельности для получения точных результатов.
+</p>
+<div>
+    <div class="demo-card-square-statistic mdl-card mdl-shadow--2dp card-own-general animate__animated animate__fadeInUp animate__delay-1s">
+        <canvas id="myChart"></canvas>
+    </div>
+
+
+</div>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+
+    @{
+
+        float av1 = 0,av2 = 0, av3 =0;
+        string str1, str2, str3;
+       
+
+        if (Model.Count() > 0)
+        {
+            foreach (var data in Model)
+            {
+                av1 += data.forOneBlock;
+                av2 += data.forSecondBlock;
+                av3 += data.forThirdBlock;
+          
+
+            }
+        }
+
+        str1 = (av1 / Model.Count()).ToString("N2");
+        str2 = (av2 / Model.Count()).ToString("N2");
+        str3 = (av3 / Model.Count()).ToString("N2");
+
+        av1 = float.Parse(str1);
+        av2 = float.Parse(str2);
+        av3 = float.Parse(str3);
+
+    }
+
+
+        let ctx = document.getElementById('myChart');
+
+
+
+        let myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Открытость и доступность', 'Способы обратной связи', 'Общий рейтинг'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [@av1,@av2,@av3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.5)',
+                        'rgba(54, 162, 235, 0.5)',
+                        'rgba(255, 206, 86, 0.5)',
+                       
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+
+
+            }
+        });
+    })
+
+
+
+</script>

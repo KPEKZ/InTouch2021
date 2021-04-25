@@ -15,7 +15,7 @@ namespace InTouch2021.Models
 
         [Required]
         public string name { get; set; }
-
+        [Required]
         public string phoneNumber { get; set; }
 
         [Required]

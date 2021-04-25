@@ -1,4 +1,5 @@
-﻿using InTouch2021.Models;
+﻿using InTouch2021.Data;
+using InTouch2021.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -14,6 +15,7 @@ namespace InTouch2021.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+      
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;

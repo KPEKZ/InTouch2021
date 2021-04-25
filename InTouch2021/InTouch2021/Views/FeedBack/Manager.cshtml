@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewData["Title"] = "Менеджер";
+}
+
+@model IEnumerable<InTouch2021.Models.FeedBackModel>
+
+<div class="mdl-grid">
+    @if (Model.Count() > 0)
+    {
+        @foreach (var data in Model)
+        {
+            <form class="mdl-cell mdl-cell--4-col">
+                <div class="demo-card-square mdl-card mdl-shadow--2dp animate__animated animate__fadeInUp animate__delay-1s container d-flex flex-column justify-content-around align-items-center">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="mdl-card__title-text mdl-typography--text-center">Имя : @data.name</h2>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="mdl-card__title-text mdl-typography--text-center">Студ. № @data.studNumber</h2>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="mdl-card__title-text mdl-typography--text-center">тел. : @data.phoneNumber</h2>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+
+                            <h2 class="mdl-card__title-text mdl-typography--text-center">@data.email</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="mdl-card__title-text mdl-typography--text-center">тема: @data.Value</h2>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            @data.message
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <button  asp-route-Id="@data.Id" asp-controller="FeedBack" asp-action="Delete" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                                Удалить
+                            </button>
+                        
+                            <button asp-route-Id="@data.Id" asp-controller="FeedBack" asp-action="Update" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+                                Изменить
+                            </button>
+              
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </form>
+        }
+
+    }
+    else
+    {
+        <p class="mdl-card__supporting-text text-center">Пусто</p>
+    }
+
+
+</div>

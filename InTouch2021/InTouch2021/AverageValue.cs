@@ -7,9 +7,9 @@ namespace InTouch2021
 {
 	public class AverageValue
 	{
-		RatingInformation information = new RatingInformation();
-		RatingInvalid Invalid = new RatingInvalid();
-		RatingService service = new RatingService();
+		public RatingInformation information = new RatingInformation();
+		public RatingInvalid Invalid = new RatingInvalid();
+		public RatingService service = new RatingService();
 		public static int NumberUser = 0;
 
 		float SumInf = 0;

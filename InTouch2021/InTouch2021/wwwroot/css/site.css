@@ -143,6 +143,7 @@ body {
     width: 100%;
     min-height: 600px;
     height: min-content;
+    padding:20px;
 }
 
 .demo-card-square-success.mdl-card {
@@ -164,7 +165,6 @@ body {
 
 .demo-card-square > .mdl-card__title {
     color: black;
-    /*    background: url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;*/ /*    background: url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;*/
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 65%;

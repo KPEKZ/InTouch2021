@@ -23,7 +23,6 @@ D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\
 D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\net5.0\InTouch2021.TagHelpers.output.cache
 D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\net5.0\InTouch2021.RazorCoreGenerate.cache
 D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -149,4 +148,10 @@ D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\bin\Debug\
 D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\net5.0\Razor\Views\AnketaFormData\Index.cshtml.g.cs
 D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\net5.0\Razor\Views\FeedBack\FeedBack.cshtml.g.cs
 D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\net5.0\Razor\Views\FeedBack\Submit.cshtml.g.cs
+D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\net5.0\Razor\Views\AnketaFormData\Monitor.cshtml.g.cs
 D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\net5.0\InTouch2021.csprojAssemblyReference.cache
+D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\net5.0\Razor\Views\AnketaFormData\Submit.cshtml.g.cs
+D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\net5.0\Razor\Views\FeedBack\UserManager.cshtml.g.cs
+D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\net5.0\Razor\Views\FeedBack\Manager.cshtml.g.cs
+D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\net5.0\Razor\Views\FeedBack\Delete.cshtml.g.cs
+D:\study\GIT_PROJECTS\InTouch2021\InTouch2021\InTouch2021\InTouch2021\obj\Debug\net5.0\Razor\Views\FeedBack\Update.cshtml.g.cs

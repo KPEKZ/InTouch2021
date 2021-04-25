@@ -7,15 +7,17 @@ namespace InTouch2021
 {
 	public class RatingInformation
 	{
-		public float[] WeightAnswersForSite;
-		public float[] WeightAnswersForStand;
-		public float koefCount = 6;
+		public float[] WeightAnswersForSite = new float [50];
+		public float[] WeightAnswersForStand = new float[50];
+		public float koefCount = 7;
 
-		public float[] WeightForSecondRule;
+		public float[] WeightForSecondRule = new float[50];
 
-		public float[] WeightForThirdRuleStand;
-		public float[] WeightForThirdRuleSite;
-		public float[] WeightForThirdRuleAll;
+		public float[] WeightForThirdRuleStand = new float[50];
+		public float[] WeightForThirdRuleSite = new float[50];
+		public float[] WeightForThirdRuleAll = new float[50];
+
+		public static int CH = 0;
 
 
 		public float RuleOne()
@@ -75,7 +77,7 @@ namespace InTouch2021
 				koefAll += WeightForThirdRuleAll[i];
 			}
 
-			value = ((koefStand + koefSite) / 2 * koefAll) * 100 * 0.4f;
+			value = ((koefStand + koefSite) / (CH * 2)) * 100 * 0.4f;
 
 			return value;
 		}
